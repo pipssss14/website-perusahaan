@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Peralatan Komputer - Terra Tecnologica</title>
+    <link rel="stylesheet" href="product .css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Hero */
+header.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #ffafbd, #ffc3a0);
+}
+
+header.hero h1 {
+    color: black;
+    font-size: 2.5rem; /* Ukuran font lebih kecil untuk kesan minimalis */
+    margin: 0;
+    animation: fadeIn 2s ease-in-out; /* Menjaga animasi */
+}
+
+header.hero p {
+    font-size: 1.1rem; /* Ukuran font lebih kecil */
+    margin: 0.5rem 0;
+    animation: fadeIn 3s ease-in-out; /* Menjaga animasi */
+}
+
+header.hero .btn {
+    padding: 0.5rem 1rem;
+    background: #0084ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background 0.3s; /* Transisi halus saat hover */
+}
+
+header.hero .btn:hover {
+    background: #005bb5;
+}
+
+header.hero img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px; /* Mengecilkan ukuran gambar lebih kecil */
+    height: auto;
+}
+
+header.hero img:nth-child(2) {
+    left: 150px; /* Memberi jarak lebih besar antara gambar pertama dan kedua */
+}
+
+/* Navigasi */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #0084ff;
+    transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after, .navbar ul li a.active::after {
+    width: 100%;
+}
+
+/* Tautan aktif di navigasi */
+.navbar ul li a.active {
+    color: #0084ff;
+    font-weight: bold;
+    border-bottom: 2px solid #0084ff;
+}
+
+/* Bagian Umum */
+section {
+    padding: 2rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section p {
+    text-align: center;
+    font-size: 1rem; /* Ukuran font lebih kecil */
+}
+
+/* Bagian Layanan */
+section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+section ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem; /* Ukuran font lebih kecil */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+footer .socials li {
+    margin: 0 0.5rem;
+}
+
+footer .socials li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s; /* Transisi halus saat hover */
+}
+
+footer .socials li a:hover {
+    color: #0084ff;
+}
+
+/* Animasi teks */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add hover effects for product items */
+.products .product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background-color: #f7f7f7; /* Slightly lighter background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Adjusted text alignment for product details */
+.product-item {
+    text-align: left; /* Align text to the left */
+}
+
+/* Add hover effects for service list items */
+.services ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background-color: #f7f7f7; /* Slightly lighter background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+       
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <img src="Eternity Border Hitam.png" alt="Logo Terra Tecnologica" style="width: 100px; height: auto;"> <!-- Tambahkan elemen gambar -->
+            <img src="logo terra.jpg" alt="Gambar Kedua" style="width: 100px; height: auto;"> <!-- Gambar kedua -->
+            <h1 class="animated-text">Selamat Datang di <span style="color: #000000;">Terra Tecnologica</span></h1>
+            <p>Kami adalah perusahaan yang bergerak di bidang jasa teknologi jaringan dan komputer.</p>
+            <a href="products.html" class="btn">lihat produk kami </a>
+        </div>
+    </header>
+   <nav class="navbar">
+       <ul>
+           <li><a href="web lvl 4.html"><i class="fas fa-home"></i> Beranda</a></li>
+           <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+           <li><a href="products.html" class="active"><i class="fas fa-box"></i> Produk</a></li>
+           <li><a href="contact.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+       </ul>
+   </nav>
+   <section id="products" class="products">
+       <div class="container">
+           <h2>Produk Kami</h2>
+           <div class="product-list">
+               <div class="product-item">
+                   <h3>Nama Produk 1</h3>
+                   <p>Deskripsi singkat tentang produk 1.</p>
+                   <p class="price">Rp 1.000.000</p>
+                  
+               </div>
+               <div class="product-item">
+                   <h3>Nama Produk 2</h3>
+                   <p>Deskripsi singkat tentang produk 2.</p>
+                   <p class="price">Rp 2.000.000</p>
+             
+               </div>
+               <div class="product-item">
+                   <h3>Nama Produk 3</h3>
+                   <p>Deskripsi singkat tentang produk 3.</p>
+                   <p class="price">Rp 3.000.000</p>
+                 
+               </div>
+           </div>
+       </div>
+   </section>
+   <section id="services" class="services">
+       <div class="container">
+           <h2>Layanan Jasa Teknisi</h2>
+           <h3>Pergantian Komponen</h3>
+           <ul>
+               <li>Pergantian SSD/Memori/Prosesor/Harddisk: <strong>Rp 100.000</strong></li>
+               <li>Pergantian casing: <strong>Rp 350.000</strong></li>
+               <li>Pergantian power supply: <strong>Rp 200.000</strong></li>
+           </ul>
+           <h3>Pemasangan dan Perawatan</h3>
+           <ul>
+               <li>Pemasangan cooler/AIO: <strong>Rp 200.000</strong></li>
+               <li>Rakit PC: <strong>Rp 500.000</strong></li>
+               <li>Pembersihan debu: <strong>Rp 350.000</strong></li>
+               <li>Deep dusting: <strong>Rp 750.000</strong></li>
+           </ul>
+           <h3>Layanan Lainnya</h3>
+           <ul>
+               <li>Instal ulang (uji coba): <strong>Rp 350.000</strong></li>
+               <li>Cek PC: <strong>Rp 150.000</strong></li>
+               <li>Pemasangan pendingin air: Mulai <strong>Rp 1.500.000</strong></li>
+               <li>Ganti air pendingin: <strong>Rp 750.000</strong></li>
+               <li>Perawatan pendingin air: Mulai <strong>Rp 1.000.000</strong></li>
+           </ul>
+           <h3>Garansi dan Jaminan</h3>
+           <ul>
+               <li>Garansi 1 tahun untuk semua layanan</li>
+               <li>Jaminan uang kembali jika tidak puas dengan layanan</li>
+           </ul>
+       </div>
+   </section>
+   <footer>
+       <div class="container">
+           <p>&copy; 2025 Terra Tecnologica. Semua Hak Dilindungi.</p>
+           <ul class="socials">
+               <li>
+                  <a href="https://taplink.cc/terrateknologicia" aria-label="Linktree Terra Tecnologica">
+                     <img src="Linktree-logo.png" alt="Linktree" style="width: 80px; height: 80px;">
+                 </a>
+               </li>
+               <li>
+                   <a href="https://www.instagram.com/terra_teknologicia/?utm_source=ig_web_button_share_sheet" aria-label="Instagram Terra Tecnologica">
+                       <i class="fab fa-instagram"></i>
+                   </a>
+               </li>
+           </ul>
+       </div>
+   </footer>
+</body>
+</html>
